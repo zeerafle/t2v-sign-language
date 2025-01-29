@@ -1,0 +1,30 @@
+[project]
+name = "t2v-sign-language"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Sam Fareez", email = "vsefareez@gmail.com" }
+]
+dependencies = [
+    "black",
+    "flake8",
+    "isort",
+    "mkdocs",
+    "python-dotenv",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/t2v_sign_language"]
