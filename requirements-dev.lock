@@ -54,6 +54,7 @@ debugpy==1.8.12
     # via ipykernel
 decorator==5.1.1
     # via ipython
+    # via moviepy
 defusedxml==0.7.1
     # via nbconvert
 docopt==0.6.2
@@ -86,6 +87,10 @@ idna==3.10
     # via httpx
     # via jsonschema
     # via requests
+imageio==2.37.0
+    # via moviepy
+imageio-ffmpeg==0.6.0
+    # via moviepy
 ipykernel==6.29.5
     # via ipynbname
     # via jupyter
@@ -188,6 +193,8 @@ mkdocs-get-deps==0.2.0
     # via mkdocs
 more-itertools==10.6.0
     # via speechmatics-python
+moviepy==2.1.2
+    # via t2v-sign-language
 mypy-extensions==1.0.0
     # via black
 nbclient==0.10.2
@@ -207,6 +214,8 @@ notebook-shim==0.2.4
     # via jupyterlab
     # via notebook
 numpy==2.2.2
+    # via imageio
+    # via moviepy
     # via pandas
     # via pyannote-core
     # via scipy
@@ -231,12 +240,19 @@ pathspec==0.12.1
     # via mkdocs
 pexpect==4.9.0
     # via ipython
+pillow==10.4.0
+    # via imageio
+    # via moviepy
 platformdirs==4.3.6
     # via black
     # via jupyter-core
     # via mkdocs-get-deps
+polars==1.21.0
+    # via t2v-sign-language
 polling2==0.5.0
     # via speechmatics-python
+proglog==0.1.10
+    # via moviepy
 prometheus-client==0.21.1
     # via jupyter-server
 prompt-toolkit==3.0.50
@@ -271,6 +287,7 @@ python-dateutil==2.9.0.post0
     # via jupyter-client
     # via pandas
 python-dotenv==1.0.1
+    # via moviepy
     # via t2v-sign-language
 python-json-logger==3.2.1
     # via jupyter-events
@@ -348,6 +365,8 @@ tornado==6.4.2
     # via jupyterlab
     # via notebook
     # via terminado
+tqdm==4.67.1
+    # via proglog
 traitlets==5.14.3
     # via comm
     # via ipykernel
