@@ -3,6 +3,7 @@ from dotenv import load_dotenv, find_dotenv
 from speechmatics.models import ConnectionSettings
 from speechmatics.batch_client import BatchClient
 from httpx import HTTPStatusError
+import json
 
 # Find .env automagically by walking up directories until it's found
 dotenv_path = find_dotenv()
@@ -32,7 +33,7 @@ with BatchClient(settings) as client:
             transcript = client.get_job_result(job_id, transcription_format='json-v2')
 
             with open(os.path.join(project_dir, 'data', 'interim', 'transcript_detik_detik_proklamasi_part2.json'), 'w') as f:
-                f.write(transcript)
+                json.dump(transcript, f)
     except HTTPStatusError as e:
         if e.response.status_code == 401:
             print('Invalid API key - Check your API_KEY at the top of the code!')
