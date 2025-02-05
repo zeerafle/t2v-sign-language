@@ -2,7 +2,7 @@
 # use `rye lock` or `rye sync` to update this lockfile
 #
 # last locked with the following flags:
-#   pre: false
+#   pre: true
 #   features: []
 #   all-features: false
 #   with-sources: false
@@ -30,14 +30,19 @@ babel==2.16.0
     # via jupyterlab-server
 beautifulsoup4==4.12.3
     # via nbconvert
+bgutil-ytdlp-pot-provider==0.7.2
+    # via t2v-sign-language
 black==25.1.0
     # via t2v-sign-language
 bleach==6.2.0
     # via nbconvert
+brotli==1.1.0
+    # via yt-dlp
 certifi==2024.12.14
     # via httpcore
     # via httpx
     # via requests
+    # via yt-dlp
 cffi==1.17.1
     # via argon2-cffi-bindings
 charset-normalizer==3.4.1
@@ -195,6 +200,8 @@ more-itertools==10.6.0
     # via speechmatics-python
 moviepy==2.1.2
     # via t2v-sign-language
+mutagen==1.47.0
+    # via yt-dlp
 mypy-extensions==1.0.0
     # via black
 nbclient==0.10.2
@@ -274,6 +281,8 @@ pycodestyle==2.12.1
     # via flake8
 pycparser==2.22
     # via cffi
+pycryptodomex==3.21.0
+    # via yt-dlp
 pyflakes==3.2.0
     # via flake8
 pygments==2.19.1
@@ -316,6 +325,7 @@ regex==2024.11.6
     # via speechmatics-python
 requests==2.32.3
     # via jupyterlab-server
+    # via yt-dlp
 rfc3339-validator==0.1.4
     # via jsonschema
     # via jupyter-events
@@ -397,6 +407,7 @@ uri-template==1.3.0
     # via jsonschema
 urllib3==2.3.0
     # via requests
+    # via yt-dlp
 watchdog==6.0.0
     # via mkdocs
 wcwidth==0.2.13
@@ -410,5 +421,11 @@ websocket-client==1.8.0
     # via jupyter-server
 websockets==14.2
     # via speechmatics-python
+    # via yt-dlp
 widgetsnbextension==4.0.13
     # via ipywidgets
+yt-dlp==2025.1.30.232843.dev0
+    # via t2v-sign-language
+yt-dlp-get-pot==0.3.0
+    # via bgutil-ytdlp-pot-provider
+    # via t2v-sign-language

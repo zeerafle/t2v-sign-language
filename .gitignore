@@ -172,3 +172,4 @@ cython_debug/
 #.idea/
 
 *.mp4
+cookies.txt

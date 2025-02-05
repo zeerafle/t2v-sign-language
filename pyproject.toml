@@ -14,6 +14,9 @@ dependencies = [
     "jupyter>=1.1.1",
     "polars>=1.21.0",
     "moviepy>=2.1.2",
+    "yt-dlp[default]>=2025.1.30.232843.dev0",
+    "yt-dlp-get-pot>=0.3.0",
+    "bgutil-ytdlp-pot-provider>=0.7.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"
