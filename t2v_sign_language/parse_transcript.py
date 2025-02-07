@@ -105,14 +105,16 @@ def trim_video(data: pl.DataFrame, video_path: str, name: str, video_save_path: 
         video_paths.append(path)
 
 if __name__ == '__main__':
+    project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
     parser = argparse.ArgumentParser(
         description='Parse the transcript and trim the video based on the transcript'
     )
     parser.add_argument('--transcript-file', type=str, required=True)
     parser.add_argument('--audio-offset', type=float, default=0)
-    parser.add_argument('--df-write-dir', type=str, required=True)
+    parser.add_argument('--df-write-dir', type=str, default=os.path.join(project_dir, 'data', 'processed'))
     parser.add_argument('--video-path', type=str, required=True)
-    parser.add_argument('--video-save-path', type=str, required=True)
+    parser.add_argument('--video-save-path', type=str, default=os.path.join(project_dir, 'data', 'processed'))
     args = parser.parse_args()
 
     with open(args.transcript_file, 'r') as f:
